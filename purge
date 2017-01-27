@@ -6,9 +6,12 @@ private void RegisterPurgeCommand()
             commands.CreateCommand("purge")
                 .Do(async (e) =>
                 {
-                    Message[] messagesToDelete;
-                    messagesToDelete = await e.Channel.DownloadMessages(100);
+                    if (e.User.ServerPermissions.ManageMessages == true)
+                    {
+                        Message[] messagesToDelete;
+                        messagesToDelete = await e.Channel.DownloadMessages(100);
 
-                    await e.Channel.DeleteMessages(messagesToDelete);
+                        await e.Channel.DeleteMessages(messagesToDelete);
+                    }
                 });
         }
