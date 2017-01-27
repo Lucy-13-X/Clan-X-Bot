@@ -1,0 +1,33 @@
+string[] Wuuf;
+
+ Wuuf = new string[]
+          {
+                "dogdays/wuuf0.jpg",
+                "dogdays/wuuf1.jpg",
+                "dogdays/wuuf2.jpg",
+                "dogdays/wuuf3.jpg",
+                "dogdays/wuuf4.jpg",
+                "dogdays/wuuf5.jpg",
+                "dogdays/wuuf6.jpg",
+                "dogdays/wuuf7.jpg",
+                "dogdays/wuuf8.jpg",
+                "dogdays/wuuf9.jpg",
+                "dogdays/wuuf10.jpg",
+                "dogdays/wuuf11.jpg",
+                "dogdays/wuuf12.jpg",
+                "dogdays/wuuf13.jpg",
+                "dogdays/wuuf14.jpg"
+          };
+          
+          RegisterWuufCommand();
+          
+          private void RegisterWuufCommand()
+        {
+            commands.CreateCommand("Wuuf")
+                .Do(async (e) =>
+                {
+                    int randomNekoIndex = rand.Next(neko.Length);
+                    string nekoToPost = neko[0];
+                    await e.Channel.SendFile("WuufToPost");
+                });
+        }
