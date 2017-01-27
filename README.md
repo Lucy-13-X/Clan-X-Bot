@@ -10,6 +10,7 @@ also beginners to C# are welcome for helping out.
 #1
 Open server, you can join here, please tell the @Staff members that you found the link here
 (by mentioning @Staff in any channel you want in the following languages, english, german, russian, japanese and french)
+https://discord.gg/013mILv1jApDNnGkn
 
 #2
 For playing music we will now use Sakura & Clementine instead of Master-X and Stephanie, so you will still can listen to music.
