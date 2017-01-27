@@ -1,0 +1,27 @@
+Random rand;
+
+        string[] neko;
+
+        public MyBot()
+        {
+            rand = new Random();
+
+            neko = new string[]
+           {
+                "neko/neko1.jpg",
+                "neko/neko2.jpg",
+                "neko/neko3.jpg"
+           };
+
+RegisterNekoCommand();
+
+ private void RegisterNekoCommand()
+        {
+            commands.CreateCommand("Neko")
+                .Do(async (e) =>
+                {
+                    int randomNekoIndex = rand.Next(neko.Length);
+                    string nekoToPost = neko[0];
+                    await e.Channel.SendFile("nekoToPost");
+                });
+        }
