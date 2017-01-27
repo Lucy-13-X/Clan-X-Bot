@@ -26,8 +26,8 @@ string[] Wuuf;
             commands.CreateCommand("Wuuf")
                 .Do(async (e) =>
                 {
-                    int randomNekoIndex = rand.Next(neko.Length);
-                    string nekoToPost = neko[0];
+                    int randomWuufIndex = rand.Next(neko.Length);
+                    string WuufToPost = neko[0];
                     await e.Channel.SendFile("WuufToPost");
                 });
         }
